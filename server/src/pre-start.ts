@@ -24,7 +24,7 @@ const args = parse({
 
 // Set the env file
 const dotenvConfig = config({
-  path: path.join(dirname(fileURLToPath(import.meta.url)), `../env/.env.${args.env}`),
+  path: path.join(dirname(fileURLToPath(import.meta.url)), `../../env/.env.${args.env}`),
 })
 
 if (dotenvConfig.error) {

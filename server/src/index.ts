@@ -2,7 +2,7 @@ import "./pre-start"
 
 import logger from "jet-logger"
 
-import EnvironmentVariables from "./constants/EnvVars"
+import EnvironmentVariables from "./constants/envVars"
 import app from "./server"
 
 

@@ -12,7 +12,7 @@ import logger from "jet-logger"
 import mongoose from "mongoose"
 import morgan from "morgan"
 
-import EnvironmentVariables from "./constants/EnvVars"
+import EnvironmentVariables from "./constants/envVars"
 import HttpStatusCodes from "./constants/HttpStatusCodes"
 import { NodeEnvs as NodeEnvironments } from "./constants/misc"
 import router from "./routes/api"
@@ -50,7 +50,7 @@ app.use((req, res, next) => {
 // Show routes called in console during development
 if (EnvironmentVariables.NodeEnv === NodeEnvironments.Dev.valueOf()) {
   app.use(
-    morgan(":method :url :status :res[content-length] - :response-time ms"),
+    morgan("dev"),
   )
 }
 

@@ -10,7 +10,6 @@ export default {
     // Casing to match express cookie options
     Options: {
       domain: process.env.COOKIE_DOMAIN ?? "",
-      httpOnly: true,
       maxAge: Number(process.env.COOKIE_EXP ?? 0),
       path: process.env.COOKIE_PATH ?? "",
       secure: process.env.SECURE_COOKIE === "true",
