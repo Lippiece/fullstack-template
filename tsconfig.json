@@ -6,7 +6,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "moduleDetection": "auto",
-    "module": "NodeNext",
+    "module": "ESNext",
     "moduleResolution": "NodeNext",
     "baseUrl": "./",
     "allowJs": true,

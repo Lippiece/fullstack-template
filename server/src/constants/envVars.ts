@@ -6,7 +6,6 @@ export default {
   CookieProps: {
     Key: "ExpressGeneratorTs",
 
-
     // Casing to match express cookie options
     Options: {
       domain: process.env.COOKIE_DOMAIN ?? "",
@@ -26,5 +25,5 @@ export default {
 
   MONGO: process.env.MONGO ?? "",
   NodeEnv: process.env.NODE_ENV ?? "",
-  Port: process.env.PORT ?? 3000,
+  Port: process.env.PORT || 3000,
 } as const

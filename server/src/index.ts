@@ -1,13 +1,27 @@
 import "./pre-start"
 
 import logger from "jet-logger"
+import { getPort, setBasePort } from "portfinder"
 
 import EnvironmentVariables from "./constants/envVars"
 import app from "./server"
 
-
 // **** Run **** //
 
-const SERVER_START_MSG = `Express server started on port: ${EnvironmentVariables.Port.toString()}`
+setBasePort(EnvironmentVariables.Port)
+getPort(
+  {
+    port: EnvironmentVariables.Port,
+  },
+  (error, port) => {
+    const SERVER_START_MSG = `Express server started on port: ${port}`
 
-app.listen(EnvironmentVariables.Port, () => { logger.info(SERVER_START_MSG); })
+    if (error) {
+      throw error
+    }
+
+    app.listen(port, () => {
+      logger.info(SERVER_START_MSG)
+    })
+  },
+)
