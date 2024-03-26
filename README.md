@@ -1,10 +1,11 @@
 # Fullstack to-do app
 ## Stack
-- Typescript
-- express
+- Astro
+  - Tailwind CSS
+  - Alpine
+  - htmx
+- Hono
 - mongoose
-- React
-- Tailwind CSS
 
 ## Backend
 - CRUD routes
